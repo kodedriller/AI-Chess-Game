@@ -305,7 +305,8 @@ function minimax(game, depth, alpha, beta, isMaximizingPlayer, sum, color) {
 
 function checkStatus(color) {
   if (game.in_checkmate()) {
-    $("#status").html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
+//     $("#status").html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
+    $("#status").html(`<b>Checkmate!</b> Oops, <b>${color}</b> win.`);
   } else if (game.insufficient_material()) {
     $("#status").html(`It's a <b>draw!</b> (Insufficient Material)`);
   } else if (game.in_threefold_repetition()) {
